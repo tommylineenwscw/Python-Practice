@@ -1,15 +1,20 @@
+
+
 score = 0 
 Good_Comments = ["Good job", "Well done", "Excellent work", "Keep it up", "Great job"]
-Bad_Comments = ["Try harder", "You can do better", "Don't give up, Keep practicing", "Don't lose hope"]
+Bad_Comments = ["Try harder", "You can do better", "Don't give up, Keep practicing", "Don't lose hope"] 
 # This program is a simple quiz that tests the user's knowledge on various topics.
 print("Welcome to the General Knowledge Quiz!")
 # This program will test your knowledge on various topics. 
-input("Are you ready to start the quiz? (yes/no) ")
 # This input is used to determine if the user is ready to start the quiz    
-if input("Are you ready to start the quiz? (yes/no) ") == "yes":
-    print("Great! Let's get started.")
-else:
-    print("Okay, maybe next time.") 
+# Ask if the user is ready to start the quiz
+start = input("Are you ready to start the quiz? (yes/no) ").strip().lower()
+
+if start != "yes":
+    print("Okay, maybe next time.")
+    exit()  # Stop the program entirely 
+
+print("Great! Let's get started.")
 
 answer = input("What is the capital of France? ")
 if answer.lower() == "paris":
@@ -38,4 +43,12 @@ else:
     print(Bad_Comments[0]) 
 
 print("Your final score is: {}/3".format(score))
-print("Thank you for playing the quiz!")
+print("Thank you for playing the quiz!") 
+if score == 3:
+    print("You are a genius!") 
+elif score == 2: 
+    print("You did great!") 
+elif score == 1: 
+    print("You did okay, but you can do better.") 
+else: 
+    print("You need to study more.")
