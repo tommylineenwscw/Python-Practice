@@ -1,12 +1,11 @@
 
-
-score = 0 
+#set the score to 0
+score = 0  
+# Define lists of good and bad comments
 Good_Comments = ["Good job", "Well done", "Excellent work", "Keep it up", "Great job"]
 Bad_Comments = ["Try harder", "You can do better", "Don't give up, Keep practicing", "Don't lose hope"] 
 # This program is a simple quiz that tests the user's knowledge on various topics.
 print("Welcome to the General Knowledge Quiz!")
-# This program will test your knowledge on various topics. 
-# This input is used to determine if the user is ready to start the quiz    
 # Ask if the user is ready to start the quiz
 start = input("Are you ready to start the quiz? (yes/no) ").strip().lower()
 
